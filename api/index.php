@@ -12,12 +12,13 @@ if (isset($_GET['option'])){
         default:
             $data['status']='ERROR';
             break;
-    }else{
-        $data['status']='ERROR';
     }
+}else{
+        $data['status']='ERROR';
 }
 
 //response
+response($data);
 function response($data){
     header("Content-Type:application/json");
     echo json_encode($data);
