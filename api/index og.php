@@ -10,7 +10,7 @@ $data['data']=null;
 if (isset($_GET['option'])){
     switch($_GET['option']){
         case 'status';
-       $data['status'] ='SUCESS'; 
+        $data['status'] ='SUCESS'; 
         sucess($data); 
         define_response($data, 'API running OK!');
         $data['data'] = 'API running OK!'; 
