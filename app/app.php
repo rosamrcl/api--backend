@@ -3,11 +3,19 @@ define('API_BASE', 'http://localhost//api/api/index.php?option=');
 
 echo '<h1>APLICAÇÃO</h1><hr>';
 
-$resultado=api_request('status');
+for($i=0; $i<10;$i++){
+    $resultado=api_request('random');
+
+    //verificar a resposta da api
+    if($resultado['status']=='ERROR'){
+        die('Aconteceu um erro na minha chamada do API - morreu agorinha, AGORINHA MESMO');
+    }
+    echo "Valor aleatório é: " . $resultado['data'] . "<br>";
+}
 
 
-echo'<pre>'; // <pre> traz a informação do array mais organizada 
-print_r ($resultado);
+echo'FINALIZADO'; 
+
 
 function api_request($option){
     $cliente=curl_init(API_BASE .$option);
