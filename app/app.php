@@ -1,8 +1,11 @@
 <?php
 define('API_BASE', 'http://localhost//api/api/index.php?option=');
+
 echo '<h1>APLICAÇÃO</h1><hr>';
 
 $resultado=api_request('status');
+
+
 echo'<pre>'; // <pre> traz a informação do array mais organizada 
 print_r ($resultado);
 
