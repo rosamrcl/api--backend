@@ -4,7 +4,7 @@ define('API_BASE', 'http://localhost//api/api/index.php?option=');
 echo '<h1>APLICAÇÃO</h1><hr>';
 
 for($i=0; $i<10;$i++){
-    $resultado=api_request('random&min=100&max=150');
+    $resultado=api_request('random&min=100&max=1000');
 
     //verificar a resposta da api
     if($resultado['status']=='ERROR'){
